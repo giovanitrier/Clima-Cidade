@@ -1,0 +1,96 @@
+<div *ngIf="!carregando && climaAtual" class="card p-3">
+
+  <!-- CIDADE E DATA -->
+  <div class="d-flex flex-column align-items-center mb-3">
+    <h2 class="card-title d-flex align-items-center gap-2">
+      <i class="fa-solid fa-location-dot"></i>
+      {{ nomeCidade || 'Localização atual' }}
+    </h2>
+    <span class="data d-flex align-items-center gap-1">
+      <i class="fa-regular fa-calendar"></i>
+      {{ climaAtual.dataHora | date:'fullDate' }} — {{ climaAtual.dataHora | date:'HH:mm' }}
+    </span>
+  </div>
+
+<div class="clima-container mb-4">
+  <!-- LADO ESQUERDO: ÍCONE + TEMPERATURA -->
+  <div class="clima-lado-esquerdo">
+    <img class="clima-icone mb-2" [src]="imagem" alt="Clima atual" width="80" />
+    <h1 class="mb-0">{{ climaAtual.temperatura }}°C</h1>
+    <p class="mb-0 text-muted">{{ climaAtual.condicao }}</p>
+  </div>
+
+  <!-- LADO DIREITO: DETALHES DO CLIMA -->
+  <div class="detalhes-clima flex-grow-1">
+    <div class="row mb-4">
+      <div class="col">
+        <p class="mb-1">🌡️ Máx</p>
+        <strong>{{ climaAtual.temperaturaMaxima }}°C</strong>
+      </div>
+      <div class="col">
+        <p class="mb-1">❄️ Mín</p>
+        <strong>{{ climaAtual.temperaturaMinima }}°C</strong>
+      </div>
+      <div class="col">
+        <p class="mb-1">💧 Umidade</p>
+        <strong>{{ climaAtual.umidade }}%</strong>
+      </div>
+      <div class="col">
+        <p class="mb-1">🌬️ Vento</p>
+        <strong>{{ climaAtual.vento }} km/h</strong>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <hr />
+
+  <!-- PREVISÃO DOS PRÓXIMOS DIAS -->
+  <h5 class="mt-3 mb-2">
+    <i class="fa-solid fa-calendar-days"></i>
+    Previsão para os próximos dias
+  </h5>
+
+  <!-- SCROLL DE DIAS -->
+  <div class="d-flex gap-2 overflow-auto py-2 mb-3">
+    <div
+      *ngFor="let dia of previsao14Dias; let i = index"
+      class="dia-card text-center p-2"
+      [class.dia-ativo]="indiceSelecionado === i"
+      (click)="indiceSelecionado = i"
+      style="min-width: 90px; cursor: pointer;"
+    >
+      <strong>{{ dia.data | date:'EEE' }}</strong>
+      <div>{{ dia.data | date:'dd/MM' }}</div>
+
+      <!-- ÍCONE DO DIA -->
+      <div class="icone-dia my-1">
+        <img
+          [src]="condicaoParaImagem[dia.condicao]"
+          alt="{{ dia.condicao }}"
+          width="30"
+          height="30"
+        />
+      </div>
+
+      <small>{{ dia.condicao }}</small>
+    </div>
+  </div>
+
+  <!-- DETALHES DO DIA SELECIONADO -->
+  <div class="mt-3">
+    <p><strong>Data:</strong> {{ previsao14Dias[indiceSelecionado]?.data | date:'fullDate' }}</p>
+    <p>🌡️ Máx: {{ previsao14Dias[indiceSelecionado]?.temperaturaMaxima }} °C</p>
+    <p>❄️ Mín: {{ previsao14Dias[indiceSelecionado]?.temperaturaMinima }} °C</p>
+    <p>💧 Umidade: {{ previsao14Dias[indiceSelecionado]?.umidade }} %</p>
+    <p>🌬️ Vento: {{ previsao14Dias[indiceSelecionado]?.vento }} km/h</p>
+    <p>☁️ Condição: {{ previsao14Dias[indiceSelecionado]?.condicao }}</p>
+  </div>
+
+</div>
+
+<!-- LOADING -->
+<div *ngIf="carregando" class="text-center p-5">
+  <i class="fa-solid fa-spinner fa-spin fa-2x"></i>
+  <p>Carregando previsão do tempo...</p>
+</div>

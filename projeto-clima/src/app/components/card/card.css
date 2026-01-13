@@ -1,0 +1,134 @@
+/* ===================== CARD PRINCIPAL ===================== */
+.card {
+  width: 60%;
+  margin: 60px auto 20px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* TÍTULO E DATA */
+.card-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.data {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ===================== CONTAINER LADO ESQUERDO + DIREITO ===================== */
+.clima-container {
+  display: flex;
+  align-items: center;       /* centraliza verticalmente */
+  justify-content: space-between; /* distância máxima entre lados */
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* ===================== LADO ESQUERDO: ÍCONE + TEMPERATURA ===================== */
+.clima-lado-esquerdo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 120px;
+  margin-left: 50px;
+}
+
+.clima-lado-esquerdo img.clima-icone {
+  width: 100px;
+  height: 100px;
+}
+
+.clima-lado-esquerdo h1 {
+  font-size: 2.5rem;
+  margin: 5px 0 2px 0;
+}
+
+.clima-lado-esquerdo p {
+  font-size: 1rem;
+  color: #777;
+}
+
+/* ===================== LADO DIREITO: DETALHES ===================== */
+.detalhes-clima {
+  display: flex;
+  align-items: center;          /* centraliza verticalmente */
+  justify-content: center;       /* centraliza horizontalmente dentro do espaço */
+  flex-grow: 1;
+}
+
+.detalhes-clima .row {
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  text-align: center;
+}
+
+.detalhes-clima .col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detalhes-clima p {
+  font-size: 0.85rem;
+  margin-bottom: 2px;
+}
+
+.detalhes-clima strong {
+  font-size: 1.1rem;
+}
+
+/* ===================== SCROLL DE DIAS ===================== */
+.dia-card {
+  background-color: #e9ecef;
+  border-radius: 8px;
+  padding: 8px 5px;
+  min-width: 130px !important;
+  transition: all 0.2s;
+  cursor: pointer;
+  text-align: center;
+}
+
+.dia-card.dia-ativo {
+  background-color: #0d6efd;
+  color: white;
+  font-weight: 600;
+}
+
+/* ===================== RESPONSIVIDADE ===================== */
+@media (max-width: 992px) {
+  .card {
+    width: 80%;
+  }
+  .clima-lado-esquerdo {
+    min-width: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 95%;
+    padding: 15px;
+  }
+
+  /* Lado esquerdo e direito empilhados no mobile */
+  .clima-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .detalhes-clima .row {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* ===================== LOADING ===================== */
+.text-center i {
+  color: #0d6efd;
+}

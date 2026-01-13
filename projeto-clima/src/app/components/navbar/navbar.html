@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+  <div class="container-fluid">
+
+    <!-- LOGO -->
+    <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+      <i class="fa-solid fa-cloud-sun"></i>
+      Clima Semanal
+    </a>
+
+    <!-- TOGGLE MOBILE -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarContent"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- CONTEÚDO -->
+    <div class="collapse navbar-collapse" id="navbarContent">
+
+      <!-- BUSCA -->
+      <form class="d-flex ms-auto" role="search" (submit)="$event.preventDefault(); buscarCidade()">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Buscar cidade"
+          aria-label="Buscar cidade"
+          [(ngModel)]="cidade"
+          name="cidade"
+        />
+        <button class="btn btn-outline-light" type="submit">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+</form>
+
+
+    </div>
+
+  </div>
+</nav>

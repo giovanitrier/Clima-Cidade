@@ -1,0 +1,20 @@
+Lista de Requisitos
+
+-Deve ter uma navbar com uma logo e um campo de pesquisa de localização.
+-Ao entrar no site a localização do usuário deve ser buscada automáticamente.
+-Deve ter um quadro mostrando as principais informações sobre o clima:
+  Localização
+  Temperatura
+  Estado: Chuva, granizo, neve, névoa, ensolarado
+  Intensidade dos raios UV.
+  Umidade.
+  Chance de Chuva
+  Vento
+-Deve ser possível ver a previsão do tempo dos próximos 7 dias, ao clicar em algum botão.
+-Deve ter um pequeno footer com algumas informações básicas ainda a serem definidas.
+-Deve estar disponível algum campo para anúncio.
+
+uma navabar simples com uma logo e uma barra de pesquisa, com a localização do usuário no canto.
+Um quadro mostrando a previsão do tempo para o dia de hoje, mostrando dados como temperatura, chuva,velocidade do vento,umidade, sol/chuva,neve, granizo, névoa, e outros dados do clima. O site deve mostrar a previsão diária, e dos próximos 7 dias para uma localidade, podendo mudar o dia ao clicar em algum botão.
+O site deve consumir alguma API gratuíta para coletar os dados do site.
+Deve ter um footer simples mostrando, alguns dados como sobre, nome do desenvolvedor, ouda empresa
