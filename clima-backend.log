@@ -1,2 +1,12 @@
 2026-01-14T14:13:47.614-03:00  INFO 3384 --- [clima-backend] [main] c.p.c.ClimaBackendApplication            : Starting ClimaBackendApplication using Java 21.0.2 with PID 3384 (C:\Users\User\Desktop\ClimaSemanal\clima-backend\target\classes started by User in C:\Users\User\Desktop\ClimaSemanal)
 2026-01-14T14:13:47.619-03:00  INFO 3384 --- [clima-backend] [main] c.p.c.ClimaBackendApplication            : No active profile set, falling back to 1 default profile: "default"
+2026-01-14T14:13:49.862-03:00  INFO 3384 --- [clima-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-01-14T14:13:49.895-03:00  INFO 3384 --- [clima-backend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-14T14:13:49.896-03:00  INFO 3384 --- [clima-backend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-01-14T14:13:50.015-03:00  INFO 3384 --- [clima-backend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-01-14T14:13:50.016-03:00  INFO 3384 --- [clima-backend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2281 ms
+2026-01-14T14:13:50.810-03:00  INFO 3384 --- [clima-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-01-14T14:13:50.829-03:00  INFO 3384 --- [clima-backend] [main] c.p.c.ClimaBackendApplication            : Started ClimaBackendApplication in 4.249 seconds (process running for 4.888)
+2026-01-14T14:13:55.360-03:00  INFO 3384 --- [clima-backend] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-14T14:13:55.361-03:00  INFO 3384 --- [clima-backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-14T14:13:55.376-03:00  INFO 3384 --- [clima-backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
