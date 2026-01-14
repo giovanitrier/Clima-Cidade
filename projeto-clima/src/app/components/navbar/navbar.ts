@@ -10,7 +10,8 @@ import { LocalizacaoService } from '../../services/localizacao';
   selector: 'app-navbar',
   standalone: true,
   imports: [CommonModule, RouterModule, FormsModule],
-  templateUrl: './navbar.html'
+  templateUrl: './navbar.html',
+  styleUrl: './navbar.css'
 })
 export class Navbar {
 

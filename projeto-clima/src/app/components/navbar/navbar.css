@@ -1,78 +1,22 @@
-/* Navbar */
-.navbar {
-  min-height: 120px;               /* altura base desktop */
-  background-color: #00BFFF;
-  display: flex;
-  align-items: center;
-  padding: 0 2rem;
-  transition: min-height 0.3s ease; /* animação suave se houver resize */
-}
+/*sm	Pequeno (Small)	576px
+  md	Médio (Medium)	768px
+  lg	Grande (Large)	992px
+  xl	Extra Grande (X-Large)	1200px
+*/
 
-/* Logo */
-.navbar-brand {
-  color: white;
-  font-size: 28px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  white-space: nowrap;             /* evita quebra do logo */
-}
-
-/* Formulário de busca */
-form[role="search"] {
-  flex-grow: 1;                     /* ocupa espaço restante */
-  max-width: 60%;                   /* ocupa até 60% da navbar no desktop */
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: max-width 0.3s ease; /* animação suave se redimensionar */
-}
-
-/* Input de busca */
-form[role="search"] input {
-  height: 55px;
-  font-size: 16px;
-  width: 100%;
-  min-width: 250px;                /* garante um tamanho mínimo */
-  border-radius: 8px 0 0 8px;
-  border: none;
-  padding: 0 1rem;
-  transition: width 0.3s ease;
-}
-
-/* Botão de busca */
-form[role="search"] button {
-  height: 55px;
-  font-size: 16px;
-  border-radius: 0 8px 8px 0;
-  border: none;
-  padding: 0 1rem;
-  transition: height 0.3s ease;
-}
-
-/* Ícones dentro do input (opcional) */
-form[role="search"] input::placeholder {
-  color: rgba(0,0,0,0.6);
-}
-
-/* Mobile */
-@media (max-width: 992px) {       /* tablets e mobile */
-  .navbar {
-    min-height: 90px;
-    padding: 0 1rem;
+@media (max-width: 1000px)  {
+  form{
+    width:100%;
+  }
+  .logo{
+    display: none !important;
   }
 
-  form[role="search"] {
-    max-width: 100%;              /* ocupa toda a largura */
-    flex-direction: column;       /* empilha input e botão */
-    gap: 0.5rem;
+}
+
+@media (min-width: 1001px){
+  form{
+    width: 50%;
   }
 
-  form[role="search"] input,
-  form[role="search"] button {
-    width: 100%;
-    height: 45px;
-    font-size: 14px;
-    border-radius: 8px;
-  }
 }

@@ -1,0 +1,2 @@
+2026-01-14T14:13:47.614-03:00  INFO 3384 --- [clima-backend] [main] c.p.c.ClimaBackendApplication            : Starting ClimaBackendApplication using Java 21.0.2 with PID 3384 (C:\Users\User\Desktop\ClimaSemanal\clima-backend\target\classes started by User in C:\Users\User\Desktop\ClimaSemanal)
+2026-01-14T14:13:47.619-03:00  INFO 3384 --- [clima-backend] [main] c.p.c.ClimaBackendApplication            : No active profile set, falling back to 1 default profile: "default"

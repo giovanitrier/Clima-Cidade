@@ -1,6 +1,7 @@
 /* ===================== CARD PRINCIPAL ===================== */
 .card {
   width: 60%;
+  height:70% !important;
   margin: 60px auto 20px;
   padding: 20px;
   background-color: #f8f9fa;
