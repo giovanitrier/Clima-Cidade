@@ -1,0 +1,9 @@
+# nixpacks.toml
+[phases.setup]
+cmds = ["npm ci"]
+
+[phases.build]
+cmds = ["npm run build -- --configuration=production"]
+
+[start]
+cmd = "npx serve -s dist/projeto-clima --port $PORT"
