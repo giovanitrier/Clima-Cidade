@@ -24,9 +24,10 @@
 .clima-container {
   display: flex;
   align-items: center;       /* centraliza verticalmente */
-  justify-content: space-between; /* distância máxima entre lados */
+  justify-content: center !important; /* centraliza horizontalmente */
   gap: 40px;
   flex-wrap: wrap;
+  margin-right: 0;
 }
 
 /* ===================== LADO ESQUERDO: ÍCONE + TEMPERATURA ===================== */
@@ -34,7 +35,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 120px;
+  min-width: 50%;
   margin: auto;
 }
 
@@ -59,6 +60,7 @@
   align-items: center;          /* centraliza verticalmente */
   justify-content: center;       /* centraliza horizontalmente dentro do espaço */
   flex-grow: 1;
+  min-width:50%;
 }
 
 .detalhes-clima .row {
@@ -104,9 +106,6 @@
 @media (max-width: 992px) {
   .card {
     width: 80%;
-  }
-  .clima-lado-esquerdo {
-    min-width: 100px;
   }
 }
 
