@@ -14,6 +14,7 @@ public class WebConfig {
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
                         .allowedOrigins("http://localhost:4200")
+                        .allowedOrigins("https://front-end-production-bdad.up.railway.app")
                         .allowedMethods("*");
             }
         };
