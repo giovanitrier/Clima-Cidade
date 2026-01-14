@@ -1,9 +1,12 @@
-# nixpacks.toml
+# nixpacks.toml para projeto-clima (Angular)
 [phases.setup]
 cmds = ["npm ci"]
 
 [phases.build]
 cmds = ["npm run build -- --configuration=production"]
 
+[phases.install]
+cmds = ["npm install -g serve"]
+
 [start]
-cmd = "npx serve -s dist/projeto-clima --port $PORT"
+cmd = "serve -s dist/projeto-clima --listen tcp://0.0.0.0:$PORT"
